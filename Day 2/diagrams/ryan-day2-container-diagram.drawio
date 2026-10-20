@@ -7,62 +7,93 @@
         <mxCell id="3M8-HCJ4wCfsc0JEDgBw-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="3M8-HCJ4wCfsc0JEDgBw-6" value="">
           <mxGeometry relative="1" as="geometry">
             <Array as="points" />
-            <mxPoint x="414" y="150" as="sourcePoint" />
+            <mxPoint x="504" y="120" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-13" connectable="0" parent="3M8-HCJ4wCfsc0JEDgBw-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Uses App" vertex="1">
+          <mxGeometry relative="1" x="-0.275" y="-1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="3M8-HCJ4wCfsc0JEDgBw-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Member" vertex="1">
-          <mxGeometry height="60" width="30" x="399" y="60" as="geometry" />
+          <mxGeometry height="60" width="30" x="489" y="37" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-2" edge="1" parent="1" source="3M8-HCJ4wCfsc0JEDgBw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-9" connectable="0" parent="EQwTNoSfgPdzT_1_HC_Z-2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Calls API Endpoints (HTTPS)" vertex="1">
+          <mxGeometry relative="1" x="-0.1267" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-19" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="EQwTNoSfgPdzT_1_HC_Z-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;API Service (REST API)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Python (FAST API) using Azure App Service&lt;/div&gt;" vertex="1">
-          <mxGeometry height="95" width="174" x="327" y="460" as="geometry" />
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-10" connectable="0" parent="EQwTNoSfgPdzT_1_HC_Z-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Read and write records (SQL)" vertex="1">
+          <mxGeometry relative="1" x="0.8057" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="EQwTNoSfgPdzT_1_HC_Z-22" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-16">
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-1" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;dashed=1;" target="EQwTNoSfgPdzT_1_HC_Z-16">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-8" connectable="0" parent="npYtmOMKrrDPCKWAkrhS-1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="AMPQ" vertex="1">
+          <mxGeometry relative="1" x="0.2446" as="geometry">
+            <mxPoint x="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-5" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="417" y="490" />
+              <mxPoint x="95" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-14" connectable="0" parent="npYtmOMKrrDPCKWAkrhS-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Validates JWT" vertex="1">
+          <mxGeometry relative="1" x="0.5421" as="geometry">
+            <mxPoint x="-5" y="-25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EQwTNoSfgPdzT_1_HC_Z-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;b&gt;API Service (REST API)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Node.js (Express) on Azure App Service&lt;/div&gt;" vertex="1">
+          <mxGeometry height="95" width="174" x="417" y="460" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-3" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;b&gt;Database (&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;System of record)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Azure SQL" vertex="1">
-          <mxGeometry height="115" width="104" x="180" y="615" as="geometry" />
-        </mxCell>
-        <mxCell id="EQwTNoSfgPdzT_1_HC_Z-23" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-16">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry height="115" width="104" x="270" y="647" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-13" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;b&gt;Cache (&lt;/b&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;b&gt;Hot read paths)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Azure Cache for Redis" vertex="1">
-          <mxGeometry height="115" width="104" x="362" y="613" as="geometry" />
-        </mxCell>
-        <mxCell id="EQwTNoSfgPdzT_1_HC_Z-24" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-16">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry height="115" width="104" x="452" y="645" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-14" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;div&gt;&lt;b&gt;Object Store (Book photos)&lt;br&gt;&lt;/b&gt;&lt;br&gt;&lt;/div&gt;Azure Blob Storage" vertex="1">
-          <mxGeometry height="115" width="104" x="557" y="615" as="geometry" />
-        </mxCell>
-        <mxCell id="dW8q-HnaY69JFd2Qo90P-1" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-18">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="dW8q-HnaY69JFd2Qo90P-2" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-17">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry height="115" width="104" x="647" y="647" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;fillColor=#fad9d5;strokeColor=#ae4132;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Queue &lt;br&gt;&lt;/b&gt;(Email digest, notifications)&lt;b&gt;&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;Azure Service Bus&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="95" width="166" x="331" y="810" as="geometry" />
+          <mxGeometry height="95" width="166" x="760" y="460" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-17" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d0cee2;strokeColor=#56517e;" value="&lt;b&gt;Email &lt;br&gt;(Outbound digest)&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Azure Communication Service&lt;/div&gt;" vertex="1">
-          <mxGeometry height="130" width="130" x="531" y="920" as="geometry" />
+          <mxGeometry height="130" width="130" x="30" y="570" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-18" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d0cee2;strokeColor=#56517e;" value="&lt;b&gt;Identity&lt;/b&gt;&lt;br&gt;&lt;b&gt;(Auth / JWT issue)&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;div&gt;Microsoft Entra External ID&lt;/div&gt;" vertex="1">
-          <mxGeometry height="130" width="130" x="180" y="920" as="geometry" />
+          <mxGeometry height="130" width="130" x="30" y="230" as="geometry" />
         </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-20" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-13">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-18" connectable="0" parent="EQwTNoSfgPdzT_1_HC_Z-20" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Read and caches hot data" vertex="1">
+          <mxGeometry relative="1" x="0.4" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="EQwTNoSfgPdzT_1_HC_Z-21" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-11" connectable="0" parent="EQwTNoSfgPdzT_1_HC_Z-21" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Uploads photos (HTTPS)" vertex="1">
+          <mxGeometry relative="1" x="0.7956" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="dW8q-HnaY69JFd2Qo90P-7" connectable="0" parent="1" style="group" value="" vertex="1">
-          <mxGeometry height="190" width="104" x="362" y="220" as="geometry" />
+          <mxGeometry height="190" width="104" x="452" y="200" as="geometry" />
         </mxCell>
         <mxCell id="3M8-HCJ4wCfsc0JEDgBw-6" parent="dW8q-HnaY69JFd2Qo90P-7" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Mobile App&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;React Native&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Member-facing UI&lt;/div&gt;" vertex="1">
           <mxGeometry height="190" width="104" as="geometry" />
@@ -74,6 +105,22 @@
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="48" y="30" as="sourcePoint" />
             <mxPoint x="98" y="-20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-16" edge="1" parent="1" source="3M8-HCJ4wCfsc0JEDgBw-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=gap;" target="EQwTNoSfgPdzT_1_HC_Z-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-17" connectable="0" parent="npYtmOMKrrDPCKWAkrhS-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Signs In (HTTPS)" vertex="1">
+          <mxGeometry relative="1" x="0.274" y="-2" as="geometry">
+            <mxPoint x="34" y="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-19" edge="1" parent="1" source="EQwTNoSfgPdzT_1_HC_Z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=0.454;entryY=0.015;entryDx=0;entryDy=0;entryPerimeter=0;defaultLabelBackgroundColor=gap;dashed=1;" target="EQwTNoSfgPdzT_1_HC_Z-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="npYtmOMKrrDPCKWAkrhS-20" connectable="0" parent="npYtmOMKrrDPCKWAkrhS-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];defaultLabelBackgroundColor=gap;" value="Sends email" vertex="1">
+          <mxGeometry relative="1" x="0.0905" y="2" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
