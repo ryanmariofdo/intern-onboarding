@@ -1,6 +1,6 @@
 # Summary of API Endpoints for BookSwap
 
-All endpoints require Authorization: Bearer <JWT>, so every one can return 401
+All endpoints require Authorization: Bearer JWT, so every one can return 401
 
 ## Books
 

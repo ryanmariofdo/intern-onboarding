@@ -10,6 +10,8 @@ info:
 
 servers:
   - url: https://api.bookswap.local
+  - url: http://127.0.0.1:4010
+    description: Prism mock (local testing)
 
 security:
   - bearerAuth: []
@@ -108,12 +110,18 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+              example:
+                code: payload_too_large
+                message: File is larger than 5 MB
         "415":
           description: File is not a JPEG or PNG
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Error"
+              example:
+                code: unsupported_media_type
+                message: File must be a JPEG or PNG
 
   # ---- GET /books/{bookId}/loans : borrower history of one book ----
   /books/{bookId}/loans:
@@ -318,36 +326,57 @@ components:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: bad_request
+            message: pageSize must be between 1 and 100
     Unauthorized:
       description: Missing or invalid token
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: unauthorized
+            message: Missing or invalid token
     Forbidden:
       description: You are logged in but not allowed to do this (for example, not the owner)
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: forbidden
+            message: Only the owner can do this
     NotFound:
       description: That item does not exist
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: not_found
+            message: That item does not exist
     Conflict:
       description: The item is in the wrong state for this action (for example, already decided)
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: conflict
+            message: This item has already been decided
     ValidationError:
       description: The JSON was valid but a field is missing or wrong (for example, no title)
       content:
         application/json:
           schema:
             $ref: "#/components/schemas/Error"
+          example:
+            code: validation_failed
+            message: title is required
+            details:
+              - field: title
+                issue: is required
 
   # ---- Schemas: the shapes of the JSON data ----
   schemas:
@@ -357,10 +386,20 @@ components:
       properties:
         code:
           type: string
-          example: validation_failed
         message:
           type: string
-          example: title is required
+        details:
+          type: array
+          description: Optional list of field-level problems
+          items:
+            type: object
+            properties:
+              field:
+                type: string
+                example: title
+              issue:
+                type: string
+                example: is required
 
     # A list of allowed values for a book's condition
     Condition:
@@ -523,6 +562,25 @@ components:
           example: 134
 
     BookPage:
+      example:
+        page: 1
+        pageSize: 20
+        total: 2
+        items:
+          - id: 42
+            ownerId: 3
+            title: Sapiens
+            author: Yuval Noah Harari
+            isbn: "9780099590088"
+            condition: good
+            photoUrl: https://bookswapstore.blob.core.windows.net/photos/42.jpg
+            available: true
+          - id: 43
+            ownerId: 8
+            title: Atomic Habits
+            author: James Clear
+            condition: like_new
+            available: false
       allOf:
         - $ref: "#/components/schemas/Page"
         - type: object

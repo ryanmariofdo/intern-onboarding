@@ -53,7 +53,24 @@ Delete the cached book entry from Redis so the next read fetches the newly updat
 Return the updated book record.
 ```
 
+### TTL choice and invalidation strategy
+#### TTL (how long a cached copy lives):
+- **Book details:** 60 seconds, because titles and authors almost never change.
+- **Browse pages:** 30 seconds, because new listings and availability change more often.
+- A short TTL means any stale copy fixes itself quickly.
+
+#### Invalidation:
+- When a book changes, write to SQL first, then delete its cached copy and bump the building’s version counter, so old browse pages are ignored.
+- If that clean-up fails, the TTL removes the stale copy within 60 seconds.
+- Loan and borrow-request status is never cached, so staleness can never cause a book to be lent twice.
 
 ## 4. Queue plan
-- Which work goes on a queue and why
-- What happens if the consumer is down for 30 minutes
+### Which work goes on a queue and why
+- Emails and weekly digest: In case the email server is down, the app should keep working. Which means, email is slow and can fail, so listing a book or borrowing must never wait for it.
+
+### What happens if the consumer is down for 30 minutes
+- Nothing is lost, because Azure Service Bus (Queue) keeps the messages until the worker returns.
+- Members aren’t affected, since nothing in the app waits for email.
+- The worker catches up within minutes after it restarts, and an alert fires if the oldest message is older than 15 minutes.
+- If a message keeps failing:
+It’s retried up to 5 times, then moved to the **dead-letter queue**, where someone can inspect it and replay it.
